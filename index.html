@@ -18,20 +18,8 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
-    /* body {
-      font-family: 'Nunito', sans-serif;
-      background: linear-gradient(160deg, #0f172a, #1e293b, #0f172a);
-      background-size: 200% 200%;
-      animation: gradientBG 12s ease infinite;
-      color: #ffffff;
-      scroll-behavior: smooth;
-      margin: 0;
-      padding: 0;
-    } */
-
     body {
       font-family: 'Nunito', sans-serif;
-      /* background: url('Blue.png') no-repeat center center fixed; */
       background: url('fundo-start.png') no-repeat center center fixed;
       background-size: cover;
       color: #ffffff;
@@ -39,12 +27,6 @@
       margin: 0;
       padding: 0;
     }
-
-    /* @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    } */
 
     .section {
       background-color: var(--bs-focus-ring-color);
@@ -58,39 +40,65 @@
       flex-direction: row-reverse;
     }
 
-    .section.banner {
-        /* background: linear-gradient(to bottom, #f8f9fa, #444); */
-        background-color: var(--bs-focus-ring-color);
-        color: #fff;
-        padding-top: 80px;
-        height: calc(100vh - 130px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 20px;
+    .hero {
+      background-color: var(--bs-focus-ring-color);
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+      text-align: center;
+      position: relative;
+      padding-top: 80px;
+      padding-bottom: 40px;
+      z-index: 1;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
     }
 
-    .section.banner h1 {
-        font-size: 2.5rem;
-        padding-bottom: 20px;
+    /* .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 0;
+    } */
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
     }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero p.lead {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+    }
+
 
     h2 {
       font-size: 1.75rem;
       font-weight: 700;
-      /* color: #90cdf4 !important; */
       margin-bottom: 20px;
     }
 
     p, li {
       font-size: 1.1rem;
       line-height: 1.6;
-      color: #f1f5f9 !important; /* Cinza claro */
+      color: #f1f5f9 !important;
     }
 
     a, a:hover, a:visited {
-      color: #93c5fd !important; /* Azul claro */
+      color: #93c5fd !important;
       text-decoration: underline;
     }
 
@@ -180,7 +188,6 @@
         <li class="nav-item"><a class="nav-link" href="#carteira"><i class="bi bi-phone"></i> Carteira</a></li>
         <li class="nav-item"><a class="nav-link" href="#curriculo"><i class="bi bi-file-earmark-text"></i> Currículo</a></li>
         <li class="nav-item"><a class="nav-link" href="#entrevista"><i class="bi bi-mic"></i> Entrevista</a></li>
-        <!-- <li class="nav-item"><a class="nav-link" href="#historia"><i class="bi bi-star-fill"></i> Inspiração</a></li> -->
         <li class="nav-item"><a class="nav-link" href="#cartilha"><i class="bi bi-download"></i> Cartilha</a></li>
         <li class="nav-item"><a class="nav-link" href="#vagas"><i class="bi bi-briefcase"></i> Vagas</a></li>
       </ul>
@@ -191,31 +198,23 @@
 <!-- Seções -->
 <div class="container">
 
-  <!-- <section class="hero text-white text-center d-flex align-items-center justify-content-center" style="height: 80vh; background-image: url('sua-imagem.jpg'); background-size: cover; background-position: center;">
-    <div style="background-color: rgba(0,0,0,0.6); padding: 30px;">
-      <h1 class="display-4">Start Profissional</h1>
-      <p class="lead">Educação, capacitação e oportunidades ao seu alcance</p>
-      <a href="#ensino" class="btn btn-light mt-3">Saiba Mais</a>
+  <header class="hero" role="banner" id="hero">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h1>Bem-vindos à Start Profissional</h1>
+          <p class="lead">Agora é a hora de você iniciar!</p>
+          <a href="#ensino" class="btn btn-light btn-lg mt-2">Saiba Mais</a>
+        </div>
+      </div>
     </div>
-  </section> -->
+  </header>
 
-  <section id="inicio" class="section banner d-flex justify-content-center align-items-center">
-    <div class="text-center">
-        <h1 class="mb-4">Bem-vindos a Start Profissional</h1>
-        <p class="lead">Agora é a hora de você iniciar!</p>
-        <a href="#ensino" class="btn btn-light mt-3">Saiba Mais</a>
-    </div>
-  </section>
-
-  
-
-  <!-- Repita para cada seção -->
+  <!-- Repetir para cada seção -->
   <section class="section" id="ensino">
     <div class="row align-items-center" data-aos="fade-up">
       <div class="col-md-6">
         <img src="ensinomedio.png" class="img-fluid" alt="Imagem Ensino">
-        <!-- <img src="https://ejabrasilead.com/wp-content/uploads/2022/01/terminar-os-estudos-este-ano-1024x576.jpeg" class="img-fluid" alt="Imagem Ensino"> -->
-        <!-- <img src="https://picsum.photos/seed/ensino/800/500" class="img-fluid" alt="Imagem Ensino"> -->
       </div>
       <div class="col-md-6">
         <h2><i class="bi bi-book"></i> Por que concluir o ensino médio?</h2>
@@ -235,8 +234,6 @@
     <div class="row align-items-center" data-aos="fade-up">
       <div class="col-md-6">
         <img src="eja.png" class="img-fluid" alt="Imagem EJA">
-        <!-- <img src="https://www.cee.ce.gov.br/wp-content/uploads/sites/49/2020/01/eja.jpg" class="img-fluid" alt="Imagem EJA"> -->
-        <!-- <img src="https://picsum.photos/seed/eja/800/500" class="img-fluid" alt="Imagem EJA"> -->
       </div>
       <div class="col-md-6">
         <h2><i class="bi bi-person-check"></i> O que é a EJA?</h2>
@@ -254,8 +251,6 @@
     <div class="row align-items-center" data-aos="fade-up">
       <div class="col-md-6">
         <img src="cursos.png" class="img-fluid" alt="Cursos">
-        <!-- <img src="https://clickpetroleoegas.com.br/blog/wp-content/uploads/2022/09/Conheca-os-10-melhores-sites-para-fazer-cursos-online-gratuitos-e-EAD-a-distancia-com-certificados-gratuitos-1340x723-1-830x450.png" class="img-fluid" alt="Cursos"> -->
-        <!-- <img src="https://picsum.photos/seed/cursos/800/500" class="img-fluid" alt="Cursos"> -->
       </div>
       <div class="col-md-6">
         Investir em cursos profisionalizantes é uma opção para melhorar.
@@ -277,12 +272,6 @@
     <div class="row align-items-center" data-aos="fade-up">
       <div class="col-md-6">
         <img src="carteira.png" class="img-fluid" alt="Carteira">
-        <!-- <img src="https://checkregistros.com.br/wp-content/uploads/2022/07/carteira-de-trabalho-digital-1024x576.jpeg" class="img-fluid" alt="Carteira"> -->
-        <!-- <img src="https://picsum.photos/seed/carteira/800/500" class="img-fluid" alt="Carteira"> -->
-        <!-- <video controls width="100%" style="border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-          <source src="video.mp4" type="video/mp4">
-          Seu navegador não suporta a tag de vídeo.
-        </video> -->
       </div>
       <div class="col-md-6">
         <h2><i class="bi bi-phone"></i> Carteira de Trabalho Digital</h2>
@@ -299,8 +288,6 @@
     <div class="row align-items-center" data-aos="fade-up">
       <div class="col-md-6">
         <img src="curriculo.png" class="img-fluid" alt="Currículo">
-        <!-- <img src="https://esemprego.com.br/wp-content/uploads/2022/04/curriculo-758x474.png" class="img-fluid" alt="Currículo"> -->
-        <!-- <img src="https://picsum.photos/seed/curriculo/800/500" class="img-fluid" alt="Currículo"> -->
       </div>
       <div class="col-md-6">
         <h2><i class="bi bi-file-earmark-text"></i> Como montar um bom currículo</h2>
@@ -318,8 +305,6 @@
     <div class="row align-items-center" data-aos="fade-up">
       <div class="col-md-6">
         <img src="entrevista.png" class="img-fluid" alt="Entrevista">
-        <!-- <img src="https://sinthoresp.com.br/site/wp-content/uploads/2020/09/999B58D9-9B2F-4399-91BC-23F4A9FBF2DB.png" class="img-fluid" alt="Entrevista"> -->
-        <!-- <img src="https://picsum.photos/seed/entrevista/800/500" class="img-fluid" alt="Entrevista"> -->
       </div>
       <div class="col-md-6">
         <h2><i class="bi bi-mic"></i> Dicas para entrevista</h2>
@@ -333,24 +318,10 @@
     </div>
   </section>
 
-  <!-- <section class="section" id="historia">
-    <div class="row align-items-center" data-aos="fade-up">
-      <div class="col-md-6">
-        <img src="https://uniateneu.edu.br/wp-content/uploads/2022/02/WhatsApp-Image-2022-03-10-at-13.24.07.jpeg" class="img-fluid" alt="Inspiração">
-      </div>
-      <div class="col-md-6">
-        <h2>7. História que inspira</h2>
-        <p>"Meu nome é Lucas. Trabalhei como ajudante de pedreiro por anos. Em 2023 terminei o ensino médio na EJA e fiz curso gratuito. Hoje tenho emprego fixo e penso em fazer faculdade."</p>
-      </div>
-    </div>
-  </section> -->
-
   <section class="section" id="cartilha">
     <div class="row align-items-center" data-aos="fade-up">
       <div class="col-md-6">
         <img src="cartilha.png" class="img-fluid" alt="Cartilha">
-        <!-- <img src="https://image.portaldacidade.com/unsafe/610x407/https://bucket.portaldacidade.com/umuarama.portaldacidade.com/img/news/2025-02/senac-oferece-cursos-de-tecnologia-com-descontos-de-ate-40-em-umuarama-67c1f13ed292f.PNG" class="img-fluid" alt="Cartilha"> -->
-        <!-- <img src="https://picsum.photos/seed/download/800/500" class="img-fluid" alt="Cartilha"> -->
       </div>
       <div class="col-md-6">
         <h2><i class="bi bi-download"></i> Cartilha Completa</h2>
@@ -364,7 +335,6 @@
     <div class="row align-items-center" data-aos="fade-up">
       <div class="col-md-6">
         <img src="vagas.png" class="img-fluid" alt="Vagas de Emprego">
-        <!-- <img src="https://image.portaldacidade.com/unsafe/610x407/https://bucket.portaldacidade.com/umuarama.portaldacidade.com/img/news/2025-02/agencia-do-trabalhador-anuncia-703-vagas-disponiveis-nesta-quarta-em-umuarama-67bef98418028.PNG" class="img-fluid" alt="Agência do Trabalhador de Umuarama"> -->
       </div>
       <div class="col-md-6">
         <h2><i class="bi bi-briefcase"></i> Vagas de Emprego</h2>
@@ -404,22 +374,22 @@
 </div>
 
 <!-- Footer -->
-<footer class="text-center">
+<footer class="text-center text-white bg-dark py-4">
   <div class="container">
-    <p>Senac - Projeto Integrador – Assistente Administrativo | Agência do Trabalhador</p>
-  </div>
-</footer>
-<!-- <footer class="text-center text-white bg-dark py-4">
-  <div class="container">
-    <p>&copy; 2025 Projeto Integrador | SENAC Umuarama</p>
+    <p>&copy; 2025 Projeto Integrador – Assistente Administrativo | SENAC Umuarama | Agência do Trabalhador</p>
     <div>
-      <a href="#ensino" class="text-white me-3">Ensino</a>
-      <a href="#vagas" class="text-white me-3">Vagas</a>
-      <a href="https://instagram.com/vagas.umuarama" class="text-white"><i class="bi bi-instagram"></i></a>
+      <a href="#ensino" class="text-white me-3"><i class="bi bi-book"></i>Ensino</a>
+      <a href="#eja" class="text-white me-3"><i class="bi bi-person-check"></i>EJA</a>
+      <a href="#cursos" class="text-white me-3"><i class="bi bi-laptop"></i>Cursos</a>
+      <a href="#carteira" class="text-white me-3"><i class="bi bi-phone"></i>Carteira</a>
+      <a href="#curriculo" class="text-white me-3"><i class="bi bi-file-earmark-text"></i>Currículo</a>
+      <a href="#entrevista" class="text-white me-3"><i class="bi bi-mic"></i>Entrevista</a>
+      <a href="#cartilha" class="text-white me-3"><i class="bi bi-download"></i>Cartilha</a>
+      <a href="#vagas" class="text-white me-3"><i class="bi bi-briefcase"></i>Vagas</a>
+      <a href="https://instagram.com/vagas.umuarama" target="_blank" class="text-white"><i class="bi bi-instagram"></i></a>
     </div>
   </div>
-</footer> -->
-
+</footer>
 
 <!-- Botão de voltar ao topo -->
 <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top" id="btnTop">
