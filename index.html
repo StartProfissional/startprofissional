@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Start Profissional</title>
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="favicon.png">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+    /* body {
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(160deg, #0f172a, #1e293b, #0f172a);
+      background-size: 200% 200%;
+      animation: gradientBG 12s ease infinite;
+      color: #ffffff;
+      scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
+    } */
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      /* background: url('Blue.png') no-repeat center center fixed; */
+      background: url('fundo-start.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #ffffff;
+      scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    } */
+
+    .section {
+      background-color: var(--bs-focus-ring-color);
+      border-radius: 20px;
+      padding: 60px 30px;
+      margin: 40px auto;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .section:nth-child(even) .row {
+      flex-direction: row-reverse;
+    }
+
+    .section.banner {
+        /* background: linear-gradient(to bottom, #f8f9fa, #444); */
+        background-color: var(--bs-focus-ring-color);
+        color: #fff;
+        padding-top: 80px;
+        height: calc(100vh - 130px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    .section.banner h1 {
+        font-size: 2.5rem;
+        padding-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      /* color: #90cdf4 !important; */
+      margin-bottom: 20px;
+    }
+
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #f1f5f9 !important; /* Cinza claro */
+    }
+
+    a, a:hover, a:visited {
+      color: #93c5fd !important; /* Azul claro */
+      text-decoration: underline;
+    }
+
+    a.btn, .btn-success {
+      background-color: #3b82f6;
+      border: none;
+      color: white;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    a.btn:hover, .btn-success:hover {
+      background-color: #2563eb;
+    }
+
+    .img-fluid {
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+      max-width: 100%;
+      height: auto;
+    }
+
+    footer {
+      background-color: #0f172a;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    .navbar {
+      background-color: #0a58ca !important;
+    }
+
+    .navbar-brand, .navbar-dark .navbar-nav .nav-link {
+      color: #ffffff !important;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    .navbar-dark .navbar-nav .nav-link i {
+      color: #93c5fd;
+      margin-right: 4px;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 48px;
+      height: 48px;
+      background: rgba(33, 32, 158, 0.55);
+      color: rgba(245, 237, 237, 0.91);
+      border: none;
+      border-radius: 50%;
+      font-size: 24px;
+      display: none;
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.8);
+      cursor: pointer;
+    }
+
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+  <div class="container">
+    <a class="navbar-brand nav-link" href="#" id="brand-link">
+      <i class="bi bi-lightbulb-fill"></i> Start Profissional
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="bi bi-list" id="navbar-icon"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#ensino"><i class="bi bi-book"></i> Ensino</a></li>
+        <li class="nav-item"><a class="nav-link" href="#eja"><i class="bi bi-person-check"></i> EJA</a></li>
+        <li class="nav-item"><a class="nav-link" href="#cursos"><i class="bi bi-laptop"></i> Cursos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#carteira"><i class="bi bi-phone"></i> Carteira</a></li>
+        <li class="nav-item"><a class="nav-link" href="#curriculo"><i class="bi bi-file-earmark-text"></i> Currículo</a></li>
+        <li class="nav-item"><a class="nav-link" href="#entrevista"><i class="bi bi-mic"></i> Entrevista</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="#historia"><i class="bi bi-star-fill"></i> Inspiração</a></li> -->
+        <li class="nav-item"><a class="nav-link" href="#cartilha"><i class="bi bi-download"></i> Cartilha</a></li>
+        <li class="nav-item"><a class="nav-link" href="#vagas"><i class="bi bi-briefcase"></i> Vagas</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Seções -->
+<div class="container">
+
+  <!-- <section class="hero text-white text-center d-flex align-items-center justify-content-center" style="height: 80vh; background-image: url('sua-imagem.jpg'); background-size: cover; background-position: center;">
+    <div style="background-color: rgba(0,0,0,0.6); padding: 30px;">
+      <h1 class="display-4">Start Profissional</h1>
+      <p class="lead">Educação, capacitação e oportunidades ao seu alcance</p>
+      <a href="#ensino" class="btn btn-light mt-3">Saiba Mais</a>
+    </div>
+  </section> -->
+
+  <section id="inicio" class="section banner d-flex justify-content-center align-items-center">
+    <div class="text-center">
+        <h1 class="mb-4">Bem-vindos a Start Profissional</h1>
+        <p class="lead">Agora é a hora de você iniciar!</p>
+        <a href="#ensino" class="btn btn-light mt-3">Saiba Mais</a>
+    </div>
+  </section>
+
+  
+
+  <!-- Repita para cada seção -->
+  <section class="section" id="ensino">
+    <div class="row align-items-center" data-aos="fade-up">
+      <div class="col-md-6">
+        <img src="https://ejabrasilead.com/wp-content/uploads/2022/01/terminar-os-estudos-este-ano-1024x576.jpeg" class="img-fluid" alt="Imagem Ensino">
+        <!-- <img src="https://picsum.photos/seed/ensino/800/500" class="img-fluid" alt="Imagem Ensino"> -->
+      </div>
+      <div class="col-md-6">
+        <h2><i class="bi bi-book"></i> Por que concluir o ensino médio?</h2>
+        <p>- A maioria das vagas exige ensino médio completo.<br>
+           - Quem estuda tem mais oportunidades.<br>
+           - É o primeiro passo para cursos técnicos ou faculdade.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="eja">
+    <div class="row align-items-center" data-aos="fade-up">
+      <div class="col-md-6">
+        <img src="https://www.cee.ce.gov.br/wp-content/uploads/sites/49/2020/01/eja.jpg" class="img-fluid" alt="Imagem EJA">
+        <!-- <img src="https://picsum.photos/seed/eja/800/500" class="img-fluid" alt="Imagem EJA"> -->
+      </div>
+      <div class="col-md-6">
+        <p>Caso não tenha concluido o ensino médio uma opção é o EJA</p>
+        <h2><i class="bi bi-person-check"></i> O que é a EJA?</h2>
+        <p>
+          A EJA (Educação de Jovens e Adultos) é gratuita e acelerada.<br>
+          Aulas à noite ou online. Ideal para quem trabalha.<br><br>
+          <strong>Como se inscrever?</strong><br>
+          <a href="https://www.educacao.pr.gov.br/servicos/Educacao/Ensino-Medio/Matricular-se-na-Educacao-de-Jovens-e-Adultos-EJA-4EoVD53n#:~:text=O%20que%20é,oportunidades%20no%20mercado%20de%20trabalho." target="_blank">EJA</a><br>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cursos">
+    <div class="row align-items-center" data-aos="fade-up">
+      <div class="col-md-6">
+        <img src="https://clickpetroleoegas.com.br/blog/wp-content/uploads/2022/09/Conheca-os-10-melhores-sites-para-fazer-cursos-online-gratuitos-e-EAD-a-distancia-com-certificados-gratuitos-1340x723-1-830x450.png" class="img-fluid" alt="Cursos">
+        <!-- <img src="https://picsum.photos/seed/cursos/800/500" class="img-fluid" alt="Cursos"> -->
+      </div>
+      <div class="col-md-6">
+        Investir em cursos profisionalizantes é uma opção para melhorar.
+        Saiba mais clicando abaixo
+        
+        <h2><i class="bi bi-laptop"></i> Onde fazer cursos gratuitos?</h2>
+        <p>
+          - <strong>SENAC:</strong> <a href="https://www.ead.senac.br/gratuito/" target="_blank">ead.senac.br/gratuito</a><br>
+          - <strong>SENAI:</strong> <a href="https://www.mundosenai.com.br" target="_blank">mundosenai.com.br</a><br>
+          - <strong>SEBRAE:</strong> <a href="https://sebrae.com.br/sites/PortalSebrae/cursosonline" target="_blank">cursos.sebrae.com.br</a><br>
+          - <strong>Escola Virtual Gov:</strong> <a href="https://www.escolavirtual.gov.br" target="_blank">escolavirtual.gov.br</a><br>
+          - <strong>GINEAD:</strong> <a href="https://www.ginead.com.br/cursos" target="_blank">ginead.com.br</a><br>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="carteira">
+    <div class="row align-items-center" data-aos="fade-up">
+      <div class="col-md-6">
+        <img src="https://checkregistros.com.br/wp-content/uploads/2022/07/carteira-de-trabalho-digital-1024x576.jpeg" class="img-fluid" alt="Carteira">
+        <!-- <img src="https://picsum.photos/seed/carteira/800/500" class="img-fluid" alt="Carteira"> -->
+        <!-- <video controls width="100%" style="border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <source src="video.mp4" type="video/mp4">
+          Seu navegador não suporta a tag de vídeo.
+        </video> -->
+      </div>
+      <div class="col-md-6">
+        <h2><i class="bi bi-phone"></i> Carteira de Trabalho Digital</h2>
+        <p>
+          1. Baixe o app "Carteira de Trabalho Digital"<br>
+          2. Crie ou entre com sua conta <a href="https://www.gov.br/pt-br" target="_blank">gov.br</a><br>
+          3. Acesse suas vagas e atualize seus dados
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="curriculo">
+    <div class="row align-items-center" data-aos="fade-up">
+      <div class="col-md-6">
+        <img src="https://esemprego.com.br/wp-content/uploads/2022/04/curriculo-758x474.png" class="img-fluid" alt="Currículo">
+        <!-- <img src="https://picsum.photos/seed/curriculo/800/500" class="img-fluid" alt="Currículo"> -->
+      </div>
+      <div class="col-md-6">
+        <h2><i class="bi bi-file-earmark-text"></i> Como montar um bom currículo</h2>
+        <p>
+          - Use fonte simples (Arial, Calibri, tamanho 12)<br>
+          - Coloque dados atualizados, cursos e experiências<br>
+          - Evite erros de português<br>
+          - <strong>Vídeo:</strong> <a href="https://www.youtube.com/watch?v=T5qmbITIMjo" target="_blank">Informações necessárias para a elaboração de um currículo</a><br>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="entrevista">
+    <div class="row align-items-center" data-aos="fade-up">
+      <div class="col-md-6">
+        <img src="https://sinthoresp.com.br/site/wp-content/uploads/2020/09/999B58D9-9B2F-4399-91BC-23F4A9FBF2DB.png" class="img-fluid" alt="Entrevista">
+        <!-- <img src="https://picsum.photos/seed/entrevista/800/500" class="img-fluid" alt="Entrevista"> -->
+      </div>
+      <div class="col-md-6">
+        <h2><i class="bi bi-mic"></i> Dicas para entrevista</h2>
+        <p>
+          - Vista-se com roupas adequadas<br>
+          - Chegue com 10-15 minutos de antecedência<br>
+          - Seja sincero e mostre interesse em aprender<br>
+          - <strong>Vídeo:</strong> <a href="https://www.youtube.com/watch?app=desktop&v=o7imiZQNiDE&t=0s" target="_blank">Dicas para entrevista</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="section" id="historia">
+    <div class="row align-items-center" data-aos="fade-up">
+      <div class="col-md-6">
+        <img src="https://uniateneu.edu.br/wp-content/uploads/2022/02/WhatsApp-Image-2022-03-10-at-13.24.07.jpeg" class="img-fluid" alt="Inspiração">
+      </div>
+      <div class="col-md-6">
+        <h2>7. História que inspira</h2>
+        <p>"Meu nome é Lucas. Trabalhei como ajudante de pedreiro por anos. Em 2023 terminei o ensino médio na EJA e fiz curso gratuito. Hoje tenho emprego fixo e penso em fazer faculdade."</p>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="section" id="cartilha">
+    <div class="row align-items-center" data-aos="fade-up">
+      <div class="col-md-6">
+        <img src="https://image.portaldacidade.com/unsafe/610x407/https://bucket.portaldacidade.com/umuarama.portaldacidade.com/img/news/2025-02/senac-oferece-cursos-de-tecnologia-com-descontos-de-ate-40-em-umuarama-67c1f13ed292f.PNG" class="img-fluid" alt="Cartilha">
+        <!-- <img src="https://picsum.photos/seed/download/800/500" class="img-fluid" alt="Cartilha"> -->
+      </div>
+      <div class="col-md-6">
+        <h2><i class="bi bi-download"></i> Cartilha Completa</h2>
+        <p>Baixe a versão em PDF da cartilha com todas as dicas e orientações.</p>
+        <a class="btn btn-success" href="StartProfissional.pdf" download>📄 Baixar Cartilha PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="vagas">
+    <div class="row align-items-center" data-aos="fade-up">
+      <div class="col-md-6">
+        <img src="https://image.portaldacidade.com/unsafe/610x407/https://bucket.portaldacidade.com/umuarama.portaldacidade.com/img/news/2025-02/agencia-do-trabalhador-anuncia-703-vagas-disponiveis-nesta-quarta-em-umuarama-67bef98418028.PNG" class="img-fluid" alt="Agência do Trabalhador de Umuarama">
+      </div>
+      <div class="col-md-6">
+        <h2><i class="bi bi-briefcase"></i> Vagas de Emprego</h2>
+        <p>Confira onde encontrar oportunidades de trabalho em Umuarama e região:</p>
+        <ul>
+          <li><strong>Agência do Trabalhador de Umuarama</strong><br>
+            Endereço: Av. Rio Branco, 4211 – Zona I<br>
+            Horário: 8h às 12h e 13h30 às 17h<br>
+            Telefone: (44) 3621-1100<br>
+            <a href="https://www.facebook.com/agenciatrabalhadorumuarama/" target="_blank">Facebook Oficial</a>
+          </li>
+          <li><strong>Portal da Cidade – Umuarama</strong><br>
+            Mais de 600 vagas ativas em diversas áreas.<br>
+            <a href="https://umuarama.portaldacidade.com/empregos" target="_blank">Acessar vagas</a>
+          </li>
+          <li><strong>LinkedIn</strong><br>
+            Vagas para diferentes níveis e setores.<br>
+            <a href="https://br.linkedin.com/jobs/vagas-em-umuarama" target="_blank">Ver oportunidades</a>
+          </li>
+          <li><strong>Indeed</strong><br>
+            Plataforma com diversas vagas atualizadas.<br>
+            <a href="https://br.indeed.com/l-umuarama%2C-pr-vagas.html" target="_blank">Buscar vagas</a>
+          </li>
+          <li><strong>BNE – Banco Nacional de Empregos</strong><br>
+            Vagas e cursos gratuitos em parceria com a UEMP.<br>
+            <a href="https://www.bne.com.br/vagas-de-emprego-em-umuarama-pr" target="_blank">Acessar BNE</a>
+          </li>
+          <li><strong>Instagram: @vagas.umuarama</strong><br>
+            Perfil que divulga vagas, estágios e cursos na cidade.<br>
+            <a href="https://www.instagram.com/vagas.umuarama/" target="_blank">Seguir no Instagram</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <div class="container">
+    <p>Senac - Projeto Integrador – Assistente Administrativo | Agência do Trabalhador</p>
+  </div>
+</footer>
+<!-- <footer class="text-center text-white bg-dark py-4">
+  <div class="container">
+    <p>&copy; 2025 Projeto Integrador | SENAC Umuarama</p>
+    <div>
+      <a href="#ensino" class="text-white me-3">Ensino</a>
+      <a href="#vagas" class="text-white me-3">Vagas</a>
+      <a href="https://instagram.com/vagas.umuarama" class="text-white"><i class="bi bi-instagram"></i></a>
+    </div>
+  </div>
+</footer> -->
+
+
+<!-- Botão de voltar ao topo -->
+<button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top" id="btnTop">
+  ↑
+</button>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  const btn = document.getElementById('btnTop');
+  window.onscroll = () => {
+    btn.style.display = window.scrollY > 200 ? 'flex' : 'none';
+  };
+
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const collapseMenu = document.querySelector('.navbar-collapse');
+
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const targetId = this.getAttribute("href");
+
+      // Fecha o menu se estiver visível
+      if (window.getComputedStyle(navbarToggler).display !== 'none' && collapseMenu.classList.contains('show')) {
+        navbarToggler.click();
+
+        // Aguarda o menu fechar antes de fazer o scroll
+        setTimeout(() => {
+          if (targetId.startsWith("#") && document.querySelector(targetId)) {
+            const yOffset = -70; // ajuste para compensar a altura do menu
+            const element = document.querySelector(targetId);
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }, 300); // tempo estimado para o menu fechar
+        e.preventDefault(); // evita o scroll padrão imediato
+      }
+    });
+  });
+
+
+  // Fecha o menu ao clicar no logo (marca)
+  document.getElementById('brand-link').addEventListener('click', () => {
+    if (window.getComputedStyle(navbarToggler).display !== 'none' && collapseMenu.classList.contains('show')) {
+      navbarToggler.click();
+    }
+  });
+
+  // Troca ícone do menu entre hambúrguer e X
+  const icon = document.getElementById('navbar-icon');
+  const menu = document.getElementById('menu');
+  menu.addEventListener('show.bs.collapse', () => {
+    icon.classList.remove('bi-list');
+    icon.classList.add('bi-x');
+  });
+  menu.addEventListener('hide.bs.collapse', () => {
+    icon.classList.remove('bi-x');
+    icon.classList.add('bi-list');
+  });
+</script>
+
+</body>
+</html>
