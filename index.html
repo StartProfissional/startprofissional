@@ -183,6 +183,23 @@
       text-shadow: 0 0 8px #facc15, 0 0 12px #facc15;
     }
 
+    .logo-glow {
+      filter: drop-shadow(0 0 6px #facc15);
+      transition: filter 0.4s ease;
+    }
+
+    .highlighted {
+      outline: 3px solid rgb(247, 150, 50);
+      outline-offset: 8px;
+      animation: flash-outline 2s ease-in-out;
+    }
+
+    @keyframes flash-outline {
+      0%   { outline-color: rgb(247, 150, 50); }
+      50%  { outline-color: transparent; }
+      100% { outline-color: rgb(11, 88, 202); }
+    }
+
     @media (max-width: 576px) {
       .btn {
         width: 100%;
@@ -203,8 +220,13 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
   <div class="container">
-    <a class="navbar-brand nav-link" href="#" id="brand-link">
+    <a class="navbar-brand nav-link" href="#hero" id="brand-link">
       <i class="bi bi-lightbulb-fill"></i> Start Profissional
+      <!-- <img src="favicon.png" alt="Logo Start Profissional" width="24" height="24" class="me-2"> Start Profissional -->
+      <!-- <img src="favicon.png" alt="Logo Start Profissional" class="logo-glow me-1" width="20"> Start Profissional -->
+      <!-- <img src="StartProfissional.png" alt="Logo Start Profissional" class="logo-glow me-1" width="20"> Start Profissional -->
+
+
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
       <i class="bi bi-list" id="navbar-icon"></i>
@@ -243,137 +265,236 @@
   <!-- Repetir para cada seção -->
   <section class="section" id="ensino">
     <div class="row align-items-center" data-aos="fade-up">
-      <div class="col-md-6">
+      <div class="col-md-6 mb-4 mb-md-0">
         <img src="ensinomedio.png" class="img-fluid" alt="Imagem Ensino">
       </div>
       <div class="col-md-6">
         <h2><i class="bi bi-book"></i> Por que concluir o ensino médio?</h2>
-        <p>
-          - A maioria das vagas exige ensino médio completo.<br>
-          - Quem estuda tem mais oportunidades.<br>
-          - É o primeiro passo para cursos técnicos ou faculdade.
-        </p>
-        <p>
-          * Caso não tenha concluído o ensino médio uma opção é o <a href="#eja">EJA</a> (Educação de Jovens e Adultos).
-        </p>
+        <ul>
+          <li> A maioria das vagas exige ensino médio completo.</li>
+          <li> Quem estuda tem mais oportunidades.</li>
+          <li> É o primeiro passo para cursos técnicos ou faculdade.</li>
+        </ul>
+        <br>
+        <ul>
+          <li>
+            <strong>
+              Caso não tenha concluído o ensino médio uma opção é o <a href="#eja">EJA (Educação de Jovens e Adultos)</a>.
+            </strong>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 
   <section class="section" id="eja">
     <div class="row align-items-center" data-aos="fade-up">
-      <div class="col-md-6">
+      <div class="col-md-6 mb-4 mb-md-0">
         <img src="eja.png" class="img-fluid" alt="Imagem EJA">
       </div>
       <div class="col-md-6">
         <h2><i class="bi bi-person-check"></i> O que é a EJA?</h2>
-        <p>
-          A EJA (Educação de Jovens e Adultos) é gratuita e acelerada.<br>
-          Aulas à noite ou online. Ideal para quem trabalha.<br><br>
-          <strong>Como se inscrever?</strong><br>
-          <a href="https://www.educacao.pr.gov.br/servicos/Educacao/Ensino-Medio/Matricular-se-na-Educacao-de-Jovens-e-Adultos-EJA-4EoVD53n#:~:text=O%20que%20é,oportunidades%20no%20mercado%20de%20trabalho." target="_blank">EJA</a><br>
-        </p>
+        <ul>
+          <li> A EJA (Educação de Jovens e Adultos) é gratuita e acelerada.</li>
+          <li> Aulas à noite ou online. Ideal para quem trabalha.</li>
+        </ul>
+        <br>
+        <ul>
+          <li>
+            <strong>
+              Como se inscrever:
+            </strong>
+            <a href="https://www.educacao.pr.gov.br/servicos/Educacao/Ensino-Medio/Matricular-se-na-Educacao-de-Jovens-e-Adultos-EJA-4EoVD53n#:~:text=O%20que%20é,oportunidades%20no%20mercado%20de%20trabalho." target="_blank">EJA</a>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 
   <section class="section" id="cursos">
     <div class="row align-items-center" data-aos="fade-up">
-      <div class="col-md-6">
+      <div class="col-md-6 mb-4 mb-md-0">
         <img src="cursos.png" class="img-fluid" alt="Cursos">
       </div>
       <div class="col-md-6">
-        Investir em cursos profissionalizantes é uma opção para melhorar.
-        Saiba mais clicando abaixo
+        <p>
+          Investir em cursos profissionalizantes é uma opção para melhorar. Saiba mais clicando abaixo
+        </p>
         
         <h2><i class="bi bi-laptop"></i> Onde fazer cursos gratuitos?</h2>
-        <p>
-          - <strong>SENAC:</strong> <a href="https://www.ead.senac.br/gratuito/" target="_blank">ead.senac.br/gratuito</a><br>
-          - <strong>SENAI:</strong> <a href="https://www.mundosenai.com.br" target="_blank">mundosenai.com.br</a><br>
-          - <strong>SEBRAE:</strong> <a href="https://sebrae.com.br/sites/PortalSebrae/cursosonline" target="_blank">cursos.sebrae.com.br</a><br>
-          - <strong>Escola Virtual Gov:</strong> <a href="https://www.escolavirtual.gov.br" target="_blank">escolavirtual.gov.br</a><br>
-          - <strong>GINEAD:</strong> <a href="https://www.ginead.com.br/cursos" target="_blank">ginead.com.br</a><br>
-        </p>
+        <ul>
+          <li>
+            <strong>
+              SENAC:
+            </strong>
+            <a href="https://www.ead.senac.br/gratuito/" target="_blank">ead.senac.br/gratuito</a>
+          </li>
+          <li>
+            <strong>
+              SENAI:
+            </strong>
+            <a href="https://www.mundosenai.com.br" target="_blank">mundosenai.com.br</a>
+          </li>
+          <li>
+            <strong>
+              SEBRAE:
+            </strong>
+            <a href="https://sebrae.com.br/sites/PortalSebrae/cursosonline" target="_blank">cursos.sebrae.com.br</a>
+          </li>
+          <li>
+            <strong>
+              Escola Virtual Gov:
+            </strong>
+            <a href="https://www.escolavirtual.gov.br" target="_blank">escolavirtual.gov.br</a>
+          </li>
+          <li>
+            <strong>
+              GINEAD:
+            </strong>
+            <a href="https://www.ginead.com.br/cursos" target="_blank">ginead.com.br</a>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 
   <section class="section" id="carteira">
     <div class="row align-items-center" data-aos="fade-up">
-      <div class="col-md-6">
+      <div class="col-md-6 mb-4 mb-md-0">
         <img src="carteira.png" class="img-fluid" alt="Carteira">
       </div>
       <div class="col-md-6">
         <h2><i class="bi bi-phone"></i> Carteira de Trabalho Digital</h2>
-        <p>
-          1. Baixe o app "Carteira de Trabalho Digital"<br>
-          2. Crie ou entre com sua conta <a href="https://www.gov.br/pt-br" target="_blank">gov.br</a><br>
-          3. Acesse suas vagas e atualize seus dados
-        </p>
+        <ol>
+          <li>
+            <strong>
+              Baixe o app "Carteira de Trabalho Digital"
+            </strong>
+          </li>
+          <li>
+            <strong>
+              Crie ou entre com sua conta <a href="https://www.gov.br/pt-br" target="_blank">gov.br</a>
+            </strong>
+          </li>
+          <li>
+            <strong>
+              Acesse suas vagas e atualize seus dados
+            </strong>
+          </li>
+        </ol>
       </div>
     </div>
   </section>
 
   <section class="section" id="curriculo">
     <div class="row align-items-center" data-aos="fade-up">
-      <div class="col-md-6">
+      <div class="col-md-6 mb-4 mb-md-0">
         <img src="curriculo.png" class="img-fluid" alt="Currículo">
       </div>
       <div class="col-md-6">
         <h2><i class="bi bi-file-earmark-text"></i> Como montar um bom currículo</h2>
-        <p>
-          - Use fonte simples (Arial, Calibri, tamanho 12)<br>
-          - Coloque dados atualizados, cursos e experiências<br>
-          - Evite erros de português<br>
-          - <strong>Vídeo:</strong> <a href="https://www.youtube.com/watch?v=T5qmbITIMjo" target="_blank">Informações necessárias para a elaboração de um currículo</a><br>
-          - <strong>Canva:</strong> <a href="https://www.canva.com/pt_br/criar/curriculo/" target="_blank">Veja como é fácil criar currículo no Canva</a><br>
-          - <strong>TV Nube:</strong> <a href="https://www.nube.com.br/tv-nube/2023/01/23/tv-nube-como-fazer-um-curriculo" target="_blank">Como fazer um currículo?</a><br>
-          - <strong>LiveCareer:</strong> <a href="https://www.livecareer.com.br/lp/lbrpt01.aspx?utm_source=google&utm_medium=pmax&utm_campaign=21749870376&utm_term=&network=x&device=m&adposition=&adgroupid=&placement=&gad_source=1&gbraid=0AAAAADnhQlPe03m4l2Z2ecf8bbvCa5D4d&gclid=EAIaIQobChMI3MXgs_b6jAMV4ShECB1Fth0gEAAYAiAAEgJhZPD_BwE" target="_blank">Crie um currículo profissional em minutos</a><br>
-        </p>
+        <ul>
+          <li>
+            <strong>
+              Use fonte simples (Arial, Calibri, tamanho 12)
+            </strong>
+          </li>
+          <li>
+            <strong>
+              Coloque dados atualizados, cursos e experiências
+            </strong>
+          </li>
+          <li>
+            <strong>
+              Evite erros de português
+            </strong>
+          </li>
+          <li>
+            <strong>
+              Vídeo:
+            </strong>
+            <a href="https://www.youtube.com/watch?v=T5qmbITIMjo" target="_blank">Informações necessárias para a elaboração de um currículo</a>
+          </li>
+          <li>
+            <strong>
+              Canva:
+            </strong>
+            <a href="https://www.canva.com/pt_br/criar/curriculo/" target="_blank">Veja como é fácil criar currículo no Canva</a>
+          </li>
+          <li>
+            <strong>
+              TV Nube:
+            </strong>
+            <a href="https://www.nube.com.br/tv-nube/2023/01/23/tv-nube-como-fazer-um-curriculo" target="_blank">Como fazer um currículo?</a>
+          </li>
+          <li>
+            <strong>
+              LiveCareer:
+            </strong>
+            <a href="https://www.livecareer.com.br/lp/lbrpt01.aspx?utm_source=google&utm_medium=pmax&utm_campaign=21749870376&utm_term=&network=x&device=m&adposition=&adgroupid=&placement=&gad_source=1&gbraid=0AAAAADnhQlPe03m4l2Z2ecf8bbvCa5D4d&gclid=EAIaIQobChMI3MXgs_b6jAMV4ShECB1Fth0gEAAYAiAAEgJhZPD_BwE" target="_blank">Crie um currículo profissional em minutos</a>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
 
   <section class="section" id="entrevista">
     <div class="row align-items-center" data-aos="fade-up">
-      <div class="col-md-6">
+      <div class="col-md-6 mb-4 mb-md-0">
         <img src="entrevista.png" class="img-fluid" alt="Entrevista">
       </div>
       <div class="col-md-6">
         <h2><i class="bi bi-mic"></i> Dicas para entrevista</h2>
-        <p>
-          - Vista-se com roupas adequadas<br>
-          - Chegue com 10-15 minutos de antecedência<br>
-          - Seja sincero e mostre interesse em aprender<br>
-          - <strong>Vídeo:</strong> <a href="https://www.youtube.com/watch?app=desktop&v=o7imiZQNiDE&t=0s" target="_blank">Dicas para entrevista</a>
-        </p>
+
+        <ul>
+          <li>
+            <strong>
+              Vista-se com roupas adequadas
+            </strong>
+          </li>
+          <li>
+            <strong>
+              Chegue com 10-15 minutos de antecedência
+            </strong>
+          </li>
+          <li>
+            <strong>
+              Seja sincero e mostre interesse em aprender
+            </strong>
+          </li>
+          <li>
+            <strong>
+              Vídeo:
+            </strong>
+            <a href="https://www.youtube.com/watch?app=desktop&v=o7imiZQNiDE&t=0s" target="_blank">Dicas para entrevista</a>
+          </li>
+        </ul>
+
       </div>
     </div>
   </section>
 
   <section class="section" id="sobre">
     <div class="row align-items-center" data-aos="fade-up">
-      <div class="col-md-6">
+      <div class="col-md-6 mb-4 mb-md-0">
         <img src="equipe-start.png" class="img-fluid" alt="Equipe Start Profissional">
       </div>
       <div class="col-md-6">
         <h2><i class="bi bi-people-fill"></i> Sobre Nós</h2>
-        <p>
-          O <strong>Start Profissional</strong> é um projeto criado pelos alunos do curso de Assistente Administrativo do <strong>SENAC Umuarama</strong>, em parceria com a <strong>Agência do Trabalhador</strong>. Nosso objetivo é ajudar jovens e adultos a conquistarem espaço no mercado de trabalho por meio da escolarização, qualificação profissional e acesso à informação.
-        </p>
-        <p>
-          Acreditamos que pequenas atitudes podem transformar vidas. Por isso, reunimos neste site orientações práticas sobre ensino, cursos gratuitos, carteira digital, currículo, entrevistas e oportunidades de emprego — tudo de forma acessível e gratuita.
-        </p>
-        <p>
-          Estamos comprometidos com a inclusão social, o desenvolvimento pessoal e o fortalecimento da cidadania. Junte-se a nós nessa jornada rumo ao seu futuro profissional!
-        </p>
+        <ul>
+          <li> O <strong>Start Profissional</strong> é um projeto criado pelos alunos do curso de Assistente Administrativo do <strong>SENAC Umuarama</strong>, em parceria com a <strong>Agência do Trabalhador</strong>. Nosso objetivo é ajudar jovens e adultos a conquistarem espaço no mercado de trabalho por meio da escolarização, qualificação profissional e acesso à informação.</li>
+          <br>
+          <li> Acreditamos que pequenas atitudes podem transformar vidas. Por isso, reunimos neste site orientações práticas sobre ensino, cursos gratuitos, carteira digital, currículo, entrevistas e oportunidades de emprego — tudo de forma acessível e gratuita.</li>
+          <br>
+          <li> Estamos comprometidos com a inclusão social, o desenvolvimento pessoal e o fortalecimento da cidadania. Junte-se a nós nessa jornada rumo ao seu futuro profissional!</li>
+        </ul>
       </div>
     </div>
   </section>
   
   <section class="section" id="cartilha">
     <div class="row align-items-center" data-aos="fade-up">
-      <div class="col-md-6">
+      <div class="col-md-6 mb-4 mb-md-0">
         <img src="cartilha.png" class="img-fluid" alt="Cartilha">
       </div>
       <div class="col-md-6">
@@ -386,7 +507,7 @@
 
   <section class="section" id="vagas">
     <div class="row align-items-center" data-aos="fade-up">
-      <div class="col-md-6">
+      <div class="col-md-6 mb-4 mb-md-0">
         <img src="vagas.png" class="img-fluid" alt="Vagas de Emprego">
       </div>
       <div class="col-md-6">
@@ -429,7 +550,8 @@
 <!-- Footer -->
 <footer>
   <div class="container">
-    <p class="mb-2">&copy; 2025 Projeto Integrador – Assistente Administrativo | SENAC Umuarama | Agência do Trabalhador</p>
+    <p class="mb-2">&copy; <span id="anoAtual"></span> Projeto Integrador – Assistente Administrativo | SENAC Umuarama | Agência do Trabalhador</p>
+
     <div class="d-flex flex-wrap justify-content-center gap-2">
       <a href="#ensino"><i class="bi bi-book"></i> Ensino</a>
       <a href="#eja"><i class="bi bi-person-check"></i> EJA</a>
@@ -456,64 +578,79 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
+  // Insere automaticamente o ano atual no rodapé
+  document.getElementById('anoAtual').textContent = new Date().getFullYear();
+  
   AOS.init();
 
   const btn = document.getElementById('btnTop');
-  window.onscroll = () => {
-    btn.style.display = window.scrollY > 200 ? 'flex' : 'none';
-  };
-
   const navbarToggler = document.querySelector('.navbar-toggler');
   const collapseMenu = document.querySelector('.navbar-collapse');
   const brandIcon = document.querySelector('.navbar-brand i');
   const icon = document.getElementById('navbar-icon');
   const menu = document.getElementById('menu');
 
+  // Botão de voltar ao topo
+  window.onscroll = () => {
+    btn.style.display = window.scrollY > 200 ? 'flex' : 'none';
+  };
+
+  // Menu hamburguer: troca ícone e brilho da lâmpada
   menu.addEventListener('show.bs.collapse', () => {
     icon.classList.remove('bi-list');
     icon.classList.add('bi-x');
-    // Acende a lâmpada
     brandIcon.classList.add('light-on');
   });
 
   menu.addEventListener('hide.bs.collapse', () => {
     icon.classList.remove('bi-x');
     icon.classList.add('bi-list');
-    // Apaga a lâmpada
     brandIcon.classList.remove('light-on');
   });
 
-  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+  // Scroll suave para links internos com destaque visual
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function (e) {
       const targetId = this.getAttribute("href");
+      const element = document.querySelector(targetId);
 
-      // Fecha o menu se estiver visível
-      if (window.getComputedStyle(navbarToggler).display !== 'none' && collapseMenu.classList.contains('show')) {
-        navbarToggler.click();
+      if (element) {
+        e.preventDefault(); // evita hash na URL
 
-        // Aguarda o menu fechar antes de fazer o scroll
-        setTimeout(() => {
-          if (targetId.startsWith("#") && document.querySelector(targetId)) {
-            const yOffset = -70; // ajuste para compensar a altura do menu
-            const element = document.querySelector(targetId);
+        const performScroll = () => {
+          // Scroll suave até a seção
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+          // Após scroll, aplica offset para compensar navbar fixa
+          setTimeout(() => {
+            const yOffset = -70;
             const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-            window.scrollTo({ top: y, behavior: 'smooth' });
-          }
-        }, 300); // tempo estimado para o menu fechar
-        e.preventDefault(); // evita o scroll padrão imediato
+            window.scrollTo({ top: y });
+
+            // Destaque visual temporário
+            element.classList.add('highlighted');
+            setTimeout(() => {
+              element.classList.remove('highlighted');
+            }, 2000);
+
+            // Remove hash da URL
+            history.replaceState(null, null, ' ');
+          }, 500);
+        };
+
+        // Se menu hamburguer estiver aberto, fecha antes de rolar
+        if (window.getComputedStyle(navbarToggler).display !== 'none' && collapseMenu.classList.contains('show')) {
+          navbarToggler.click();
+          setTimeout(performScroll, 300); // espera o menu fechar
+        } else {
+          performScroll(); // rola imediatamente
+        }
       }
     });
   });
-
-  // Fecha o menu ao clicar no logo (marca)
-  document.getElementById('brand-link').addEventListener('click', () => {
-    if (window.getComputedStyle(navbarToggler).display !== 'none' && collapseMenu.classList.contains('show')) {
-      navbarToggler.click();
-    }
-  });
-
-
 </script>
+
+
 
 </body>
 </html>
