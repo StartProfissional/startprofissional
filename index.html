@@ -133,28 +133,57 @@
       height: auto;
     }
 
+    .navbar {
+      background-color: rgb(11, 88, 202) !important;
+      padding-top: 0.6rem;
+      padding-bottom: 0.6rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-nav .nav-link {
+      white-space: nowrap;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .navbar-brand,
+    .navbar-dark .navbar-nav .nav-link {
+      color: #fff !important;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-dark .navbar-nav .nav-link:hover {
+      color: #dbeafe !important;
+    }
+
+    .navbar-dark .navbar-nav .nav-link i {
+      color: #ffffffcc;
+      margin-right: 6px;
+    }
+
+    /* Rodapé */
     footer {
-      background-color: #0f172a;
-      color: white;
+      background: rgb(247, 150, 50);
+      color: #fff;
       padding: 30px 0;
       text-align: center;
       font-size: 0.95rem;
     }
 
-    .navbar {
-      background-color: #0a58ca !important;
+    footer a {
+      color: #fff;
+      font-weight: 500;
+      margin: 0 6px;
+      transition: color 0.3s ease;
+      text-decoration: none;
     }
 
-    .navbar-brand, .navbar-dark .navbar-nav .nav-link {
-      color: #ffffff !important;
-      font-weight: 600;
-      font-size: 1.05rem;
+    footer a:hover {
+      color: #1e1e1e;
+      text-decoration: underline;
     }
 
-    .navbar-dark .navbar-nav .nav-link i {
-      color: #93c5fd;
-      margin-right: 4px;
-    }
 
     .back-to-top {
       position: fixed;
@@ -177,7 +206,24 @@
       cursor: pointer;
     }
 
+    .light-on {
+      color: #facc15 !important; /* amarelo quente tipo lâmpada acesa */
+      text-shadow: 0 0 8px #facc15, 0 0 12px #facc15;
+    }
 
+
+    a.btn, .btn-success {
+      padding: 10px 20px;
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 576px) {
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -199,6 +245,7 @@
         <li class="nav-item"><a class="nav-link" href="#carteira"><i class="bi bi-phone"></i> Carteira</a></li>
         <li class="nav-item"><a class="nav-link" href="#curriculo"><i class="bi bi-file-earmark-text"></i> Currículo</a></li>
         <li class="nav-item"><a class="nav-link" href="#entrevista"><i class="bi bi-mic"></i> Entrevista</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sobre"><i class="bi bi-people-fill"></i> Sobre</a></li>
         <li class="nav-item"><a class="nav-link" href="#cartilha"><i class="bi bi-download"></i> Cartilha</a></li>
         <li class="nav-item"><a class="nav-link" href="#vagas"><i class="bi bi-briefcase"></i> Vagas</a></li>
       </ul>
@@ -307,6 +354,9 @@
           - Coloque dados atualizados, cursos e experiências<br>
           - Evite erros de português<br>
           - <strong>Vídeo:</strong> <a href="https://www.youtube.com/watch?v=T5qmbITIMjo" target="_blank">Informações necessárias para a elaboração de um currículo</a><br>
+          - <strong>Canva:</strong> <a href="https://www.canva.com/pt_br/criar/curriculo/" target="_blank">Veja como é fácil criar currículo no Canva</a><br>
+          - <strong>TV Nube:</strong> <a href="https://www.nube.com.br/tv-nube/2023/01/23/tv-nube-como-fazer-um-curriculo" target="_blank">Como fazer um currículo?</a><br>
+          - <strong>LiveCareer:</strong> <a href="https://www.livecareer.com.br/lp/lbrpt01.aspx?utm_source=google&utm_medium=pmax&utm_campaign=21749870376&utm_term=&network=x&device=m&adposition=&adgroupid=&placement=&gad_source=1&gbraid=0AAAAADnhQlPe03m4l2Z2ecf8bbvCa5D4d&gclid=EAIaIQobChMI3MXgs_b6jAMV4ShECB1Fth0gEAAYAiAAEgJhZPD_BwE" target="_blank">Crie um currículo profissional em minutos</a><br>
         </p>
       </div>
     </div>
@@ -329,6 +379,26 @@
     </div>
   </section>
 
+  <section class="section" id="sobre">
+    <div class="row align-items-center" data-aos="fade-up">
+      <div class="col-md-6">
+        <img src="equipe-start.png" class="img-fluid" alt="Equipe Start Profissional">
+      </div>
+      <div class="col-md-6">
+        <h2><i class="bi bi-people-fill"></i> Sobre Nós</h2>
+        <p>
+          O <strong>Start Profissional</strong> é um projeto criado pelos alunos do curso de Assistente Administrativo do <strong>SENAC Umuarama</strong>, em parceria com a <strong>Agência do Trabalhador</strong>. Nosso objetivo é ajudar jovens e adultos a conquistarem espaço no mercado de trabalho por meio da escolarização, qualificação profissional e acesso à informação.
+        </p>
+        <p>
+          Acreditamos que pequenas atitudes podem transformar vidas. Por isso, reunimos neste site orientações práticas sobre ensino, cursos gratuitos, carteira digital, currículo, entrevistas e oportunidades de emprego — tudo de forma acessível e gratuita.
+        </p>
+        <p>
+          Estamos comprometidos com a inclusão social, o desenvolvimento pessoal e o fortalecimento da cidadania. Junte-se a nós nessa jornada rumo ao seu futuro profissional!
+        </p>
+      </div>
+    </div>
+  </section>
+  
   <section class="section" id="cartilha">
     <div class="row align-items-center" data-aos="fade-up">
       <div class="col-md-6">
@@ -385,22 +455,25 @@
 </div>
 
 <!-- Footer -->
-<footer class="text-center text-white bg-dark py-4">
+<footer>
   <div class="container">
-    <p>&copy; 2025 Projeto Integrador – Assistente Administrativo | SENAC Umuarama | Agência do Trabalhador</p>
-    <div>
-      <a href="#ensino" class="text-white me-3"><i class="bi bi-book"></i>Ensino</a>
-      <a href="#eja" class="text-white me-3"><i class="bi bi-person-check"></i>EJA</a>
-      <a href="#cursos" class="text-white me-3"><i class="bi bi-laptop"></i>Cursos</a>
-      <a href="#carteira" class="text-white me-3"><i class="bi bi-phone"></i>Carteira</a>
-      <a href="#curriculo" class="text-white me-3"><i class="bi bi-file-earmark-text"></i>Currículo</a>
-      <a href="#entrevista" class="text-white me-3"><i class="bi bi-mic"></i>Entrevista</a>
-      <a href="#cartilha" class="text-white me-3"><i class="bi bi-download"></i>Cartilha</a>
-      <a href="#vagas" class="text-white me-3"><i class="bi bi-briefcase"></i>Vagas</a>
-      <a href="https://instagram.com/vagas.umuarama" target="_blank" class="text-white"><i class="bi bi-instagram"></i></a>
+    <p class="mb-2">&copy; 2025 Projeto Integrador – Assistente Administrativo | SENAC Umuarama | Agência do Trabalhador</p>
+    <div class="d-flex flex-wrap justify-content-center gap-2">
+      <a href="#ensino"><i class="bi bi-book"></i> Ensino</a>
+      <a href="#eja"><i class="bi bi-person-check"></i> EJA</a>
+      <a href="#cursos"><i class="bi bi-laptop"></i> Cursos</a>
+      <a href="#carteira"><i class="bi bi-phone"></i> Carteira</a>
+      <a href="#curriculo"><i class="bi bi-file-earmark-text"></i> Currículo</a>
+      <a href="#entrevista"><i class="bi bi-mic"></i> Entrevista</a>
+      <a href="#sobre"><i class="bi bi-people-fill"></i> Sobre</a>
+      <a href="#cartilha"><i class="bi bi-download"></i> Cartilha</a>
+      <a href="#vagas"><i class="bi bi-briefcase"></i> Vagas</a>
+      <a href="https://instagram.com/vagas.umuarama" target="_blank"><i class="bi bi-instagram"></i></a>
     </div>
   </div>
 </footer>
+
+
 
 <!-- Botão de voltar ao topo -->
 <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top" id="btnTop">
@@ -454,13 +527,18 @@
   // Troca ícone do menu entre hambúrguer e X
   const icon = document.getElementById('navbar-icon');
   const menu = document.getElementById('menu');
+  const brandIcon = document.querySelector('.navbar-brand i'); // o ícone da lâmpada
   menu.addEventListener('show.bs.collapse', () => {
     icon.classList.remove('bi-list');
     icon.classList.add('bi-x');
+    // Acende a lâmpada
+    brandIcon.classList.add('light-on');
   });
   menu.addEventListener('hide.bs.collapse', () => {
     icon.classList.remove('bi-x');
     icon.classList.add('bi-list');
+    // Apaga a lâmpada
+    brandIcon.classList.remove('light-on');
   });
 </script>
 
